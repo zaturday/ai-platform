@@ -12,7 +12,6 @@ internal project for ai platform container
 install tools
 ```
 apt install vim
-apt install nettools
 apt install net-tools
 ```
 
