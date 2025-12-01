@@ -79,6 +79,17 @@ EOF
 # Rancher
 install rancher with Helm
 ```
+helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+helm repo update
+
+kubectl create namespace cattle-system
+
+helm install rancher rancher-stable/rancher \
+  --namespace cattle-system \
+  --set hostname= \
+  --set bootstrapPassword= \
+  --set replicas=1 \
+  --set ingress.tls.source=rancher
 
 ```
 
